@@ -447,6 +447,168 @@ main()
 printf("%s",s);
 }
 ```
+## string vowels change to uppercase
+```c
+#include<stdio.h>
+main()
+{
+        char str[100];
+        int i;
+        printf("enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='o'||str[i]=='u')
+                {
+                        printf("%c",str[i-32]);
+                }
+        }
+        for(i=0;str[i]!='\0';i++)
+                printf("%c",str[i]);
+}
+```
+## strings vowel sort
+```c
+#include<stdio.h>
+main()
+{
+        char str[100];
+        int i,j,temp,len;
+        printf("enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+             len++;
+        for(i=0;i<len;i++)
+        {
+                if(str[i]=='a'||str[i]=='e'||str[i]=='i'||str[i]=='0'||str[i]=='u')
+                {
+                                temp=str[i];
+                                str[i]=str[j];
+                                str[j]=temp;
+                }
+        }
+        printf("%s",str);
+}
+```
+## printing char by char in string
+```c
+#include<stdio.h>
+main()
+{
+        char str[100];
+        int i;
+        printf("Enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                printf("%c\n",str[i]);
+        }
+}
+```
+## to check the appers in string or not
+```c
+#include<stdio.h>
+main()
+{
+        char str[100];
+        int i,count=0;
+        printf("enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                if(str[i]=='t' || str[i+1]=='h' || str[i+2]=='e')
+                {
+                        if(str[i]==0 || str[i-1]==' '|| str[i+3]=='\0')
+                        count++;
+                }
+        }
+        printf("%d",count);
+}
+```
+## string puncuntion count
+```c
+#include<stdio.h>
+main()
+{
+        char str[10];
+        int i,count=0;
+        printf("enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                if(str[i]=='!')
+                {
+                        count++;
+                }
+        }
+        printf("%d",count);
+}
+```
+## largest palindromic substring
+```c
+#include <stdio.h>
+#include <stdbool.h>
+#include <string.h>
+bool ispalindrome(char str[],int left,int right){
+        while(left<right){
+                if(str[left]!=str[right]){
+                        return false;
+                }
+                left++;
+                right--;
+        }
+        return true;
+}
+int main(){
+char str[100];
+printf("Enter a string");
+scanf("%s",str);
+int len=strlen(str);
+int maxstart=0;
+int maxlen=0;
+for(int i=0;i<len;i++){
+        for(int j=i;j<len;j++){
+                  if(ispalindrome(str,i,j)){
+                  int currentlen=j-i+1;
+                  if(currentlen>maxlen){
+                          maxlen=currentlen;
+                          maxstart=i;
+                  }
+        }
+}
+}
+for(int k=0;k<maxlen;k++){
+        printf("%c",str[maxstart+k]);
+}
+}
+```
+## string reverse vowels
+```c
+#include<stdio.h>
+main()
+{
+char str[100];
+int i,j,len=0;
+printf("Enter the string:");
+scanf("%s",str);
+for(i=0;str[i]!='\0';i++)
+{
+        len=len+1;
+}
+printf("%d",len);
+for(i=0;i<=len;i++)
+{
+        if(str[i]=='a'||str[i]=='e'||str[i]=='o'||str[i]=='i'||str[i]=='u')
+       {
+               j=str[i];
+               for(j=len-1;j>=0;j--)
+               {
+                       printf("%c",str[j]);
+               }
+        }
+}
+```
+## 
 
 
                                                                               
