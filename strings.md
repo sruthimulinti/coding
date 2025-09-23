@@ -278,6 +278,176 @@ main()
                         printf("substring notfound");
 }
 ```
+## string vowel or consonent
+```c
+#include<stdio.h>
+main()
+{
+        char str[10];
+        int i,vow=0,con=0;
+        printf("enter the string");
+        scanf("%s",str);
+        while(str[i]!='\0')
+        {
+                if(str[i]=='a'||str[i]=='e'||str[i]=='o'||str[i]=='i'||str[i]=='u')
+               {
+                       vow++;
+               }
+                else
+                        con++;
+        i++;
+        }
+        printf("vow=%d\n",vow);
+        printf("con=%d\n",con);
+}
+```
+## string sort
+```c
+#include<stdio.h>
+main()
+{
+        char str[100];
+        int i,len=0,temp=0,j;
+        printf("enter the string");
+        gets(str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                len++;
+        }
+        for(i=0;i<len-1;i++)
+        {
+                for(j=i+1;j<len;j++)
+                {
+                        if(str[i]>str[j])
+                        {
+                                temp=str[i];
+                                str[i]=str[j];
+                                str[j]=temp;
+                        }
+                }
+        }
+ printf("%s",str);
+}
+```
+## string from start to end index
+```c
+#include<stdio.h>
+main()
+{
+        char str[10];
+        int s,e,i;
+        printf("enter the string");
+        scanf("%s",str);
+        printf("start end");
+        scanf("%d%d",&s,&e);
+        for(i=s ;i<=e;i++)
+        {
+                printf("%c",str[i]);
+        }
+}
+```
+## string reverse
+```c
+#include<stdio.h>
+main()
+{
+        char str[10];
+        int i,len=0;
+        printf("enter the string");
+        scanf("%s",str);
+        for(i=0;str[i]!='\0';i++)
+        {
+                len++;
+        }
+        for(i=len;i>=0;i--)
+        {
+                printf("%c",str[i]);
+        }
+}
+```
+## string before new line 
+```c
+#include<stdio.h>
+main()
+{
+        char str[20];
+        //="sruthi\nclass";
+        int i,n=3;
+        printf("enter the string");
+        for(i=0;i<n;i++)
+        {
+            fgets(str,sizeof(str),stdin);
+            if(i==0)
+                    printf("%s",str);
+        }
+        i=0;
+        while(str[i]!='\0')
+        {
+                        printf("%c",str[i]);
+                        if(str[i]=='\n')
+                                break;
+        i++;
+        }
+```
+## smallest word and largest word
+```c
+include<stdio.h>
+main()
+{
+        char str;
+        int min,max,word;
+        printf("enter the string");
+        gets(str);
+        len=strlen(str);
+        min=len;
+        max=0;
+        word='\0';
+        for(i=0;i<=len;i++)
+        {
+             if(strlen(word)>min)
+             {
+                    min=word;
+                    strcpy(word,min);
+             }
+             else if(strlen(word)<max)
+             {
+                    max=word;
+                    strcpy(word,max);
+             }
+ }
+        printf("%s",min);
+        printf("%s",max);
+}
+```
+## string decompress
+```c
+#include<stdio.h>
+#include<string.h>
+main()
+{
+        char str[100],s[100];
+        int i,k,count=0;
+        printf("enter the string");
+        scanf("%s",str);
+        int j=0;
+        for(i=0;str[i]!='\0';i++)
+        {
+                if(str[i]>'0' && str[i]<='9')
+                {
+                       k=str[i]-'0';
+                       for(int l=0;l<k-1;l++)
+                       {
+                          s[j++]=str[i-1];
+                       }
+                }
+                else
+                        s[j++]=str[i];
+        }
+        s[j]='\0';
+printf("%s",s);
+}
+```
+
 
                                                                               
                                                                               
